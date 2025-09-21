@@ -1,0 +1,24 @@
+@import "tailwindcss";
+.btn-tailwind::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: #1d4ed8; /* Tailwind's purple-700 */
+  z-index: -1;
+  transition: all 1s;
+}
+.btn-tailwind:hover::before {
+  width: 160%;
+}
+.btn-tailwind:hover {
+  color: white;
+}
+
+.box {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}

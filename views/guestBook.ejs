@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+    <div>
+        <% if (locals.entry) {%>
+
+            <div>
+                <h1>
+                    <%= entry.name %>
+                </h1>
+                <p>
+                    <%= entry.message %>
+                </p>
+                <small>
+                    <%= entry.time %>
+                </small>
+
+                <div>
+                    <a href="/update/<%= entry.id %>" class="button">Update</a>
+                    <form action="/delete/<%= entry.id %>" method="POST">
+                        <button>Delete</button>
+                    </form>
+                </div>
+                <% } %>
+            </div>
+            <%- include("partials/footer.ejs") %>

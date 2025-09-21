@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+    <div class="">
+        <form action="/update/<%= entry.id %>" method="POST" class="flex flex-col h-50">
+            <label for="updatedGuest">Name</label> <input type="text" name="updatedGuest"
+                placeholder="Update your name">
+            <label for="updatedMessage">Message</label> <input type="text" name="updatedMessage"
+                placeholder="Update your message">
+            <input type="submit">
+        </form>
+    </div>
+    <%- include("partials/footer.ejs") %>

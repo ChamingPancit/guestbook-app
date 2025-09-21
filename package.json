@@ -1,0 +1,22 @@
+{
+  "name": "guestbook-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"nodemon index.js\" \"npx tailwindcss -i ./public/input.css -o ./public/output.css --watch\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "concurrently": "^9.2.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "tailwindcss": "^4.1.13"
+  }
+}
