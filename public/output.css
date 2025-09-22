@@ -7,13 +7,12 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-50: oklch(98.7% 0.022 95.277);
-    --color-blue-50: oklch(97% 0.014 254.604);
     --color-blue-100: oklch(93.2% 0.032 255.585);
-    --color-blue-200: oklch(88.2% 0.059 254.128);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-blue-700: oklch(48.8% 0.243 264.376);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-800: oklch(27.8% 0.033 256.848);
+    --color-black: #000;
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
@@ -188,11 +187,17 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
   }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
@@ -215,6 +220,9 @@
   .flex-col {
     flex-direction: column;
   }
+  .flex-row {
+    flex-direction: row;
+  }
   .items-center {
     align-items: center;
   }
@@ -223,6 +231,9 @@
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
   }
   .overflow-hidden {
     overflow: hidden;
@@ -281,11 +292,17 @@
     --tw-font-weight: var(--font-weight-light);
     font-weight: var(--font-weight-light);
   }
+  .text-black {
+    color: var(--color-black);
+  }
   .text-blue-600 {
     color: var(--color-blue-600);
   }
   .text-blue-700 {
     color: var(--color-blue-700);
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
   }
   .uppercase {
     text-transform: uppercase;
@@ -312,8 +329,12 @@
   left: -40px;
   transform: skewX(45deg);
   background-color: #1d4ed8;
-  z-index: -1;
+  z-index: 0;
   transition: all 1s;
+}
+.btn-tailwind {
+  position: relative;
+  z-index: 1;
 }
 .btn-tailwind:hover::before {
   width: 160%;

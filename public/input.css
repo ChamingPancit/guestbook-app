@@ -7,9 +7,13 @@
   top: 0;
   left: -40px;
   transform: skewX(45deg);
-  background-color: #1d4ed8; /* Tailwind's purple-700 */
-  z-index: -1;
+  background-color: #1d4ed8; /* Tailwind's blue-700 */
+  z-index: 0;
   transition: all 1s;
+}
+.btn-tailwind {
+  position: relative;
+  z-index: 1;
 }
 .btn-tailwind:hover::before {
   width: 160%;
